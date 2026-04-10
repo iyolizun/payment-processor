@@ -1,0 +1,31 @@
+{
+  "serviceName": "payment-processor",
+  "version": "1.2.3",
+  "status": "healthy",
+  "timestamp": "2024-10-27T10:00:00Z",
+  "uptimeSeconds": 3600,
+  "memoryUsageMB": 256,
+  "cpuLoadAverage": 0.25,
+  "activeTransactions": 128,
+  "databaseConnection": {
+    "status": "connected",
+    "responseTimeMs": 5
+  },
+  "dependencies": {
+    "authService": {
+      "status": "healthy",
+      "version": "2.0.1"
+    },
+    "billingService": {
+      "status": "degraded",
+      "version": "1.5.0",
+      "error": "High latency"
+    }
+  },
+  "metrics": {
+    "successfulTransactionsPerMinute": 60,
+    "failedTransactionsPerMinute": 2,
+    "averageTransactionTimeMs": 200
+  },
+  "environment": "production"
+}
